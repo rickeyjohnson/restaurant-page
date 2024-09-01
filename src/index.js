@@ -37,7 +37,13 @@ const initial_page_load = () => {
 }
 
 function wipePage() {
-    // code
+    let content = document.querySelector("#content");
+
+    let child = content.lastElementChild;
+    while (child) {
+        content.removeChild(child);
+        child = content.lastElementChild;
+    }
 }
 
 initial_page_load()
@@ -49,6 +55,7 @@ buttons.forEach((button) => {
 
         switch (id) {
             case "home":
+                wipePage()
                 initial_page_load()
                 break
             case "menu":
