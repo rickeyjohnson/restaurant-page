@@ -2,7 +2,7 @@ import './styles.css'
 import { menu_page_load } from './menu'
 import { about_page_load } from './about'
 
-function initial_page_load () {
+const initial_page_load = () => {
     let content = document.getElementById("content")
     let title = document.createElement("h1")
     let summary = document.createElement("div")
@@ -36,11 +36,29 @@ function initial_page_load () {
     content.appendChild(location)
 }
 
+function wipePage() {
+    // code
+}
+
 initial_page_load()
 
 let buttons = document.querySelectorAll("button")
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        alert(button.getAttribute("id"))
+        let id = button.getAttribute("id")
+
+        switch (id) {
+            case "home":
+                initial_page_load()
+                break
+            case "menu":
+                menu_page_load()
+                break
+            case "about":
+                about_page_load()
+                break
+            default:
+                break
+        }
     })
 })

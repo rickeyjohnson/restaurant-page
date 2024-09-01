@@ -1,5 +1,10 @@
 export const menu_page_load = () => {
-    content = document.getElementById("content")
+    let content = document.getElementById("content")
+
+    let title = document.createElement("h1")
+    title.setAttribute("id", "title")
+    title.textContent = "Menu"
+    content.appendChild(title)
 
     let foodContainer = document.createElement("div")
     foodContainer.setAttribute("id", "foodContainer")
