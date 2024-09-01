@@ -59,9 +59,11 @@ buttons.forEach((button) => {
                 initial_page_load()
                 break
             case "menu":
+                wipePage()
                 menu_page_load()
                 break
             case "about":
+                wipePage()
                 about_page_load()
                 break
             default:
