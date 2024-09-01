@@ -1,5 +1,6 @@
 import './styles.css'
 import { menu_page_load } from './menu'
+import { about_page_load } from './about'
 
 function initial_page_load () {
     let content = document.getElementById("content")
@@ -36,3 +37,10 @@ function initial_page_load () {
 }
 
 initial_page_load()
+
+let buttons = document.querySelectorAll("button")
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.getAttribute("id"))
+    })
+})
