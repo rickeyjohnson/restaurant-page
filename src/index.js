@@ -1,4 +1,5 @@
 import './styles.css'
+import { menu_page_load } from './menu'
 
 function initial_page_load () {
     let content = document.getElementById("content")
